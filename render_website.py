@@ -8,30 +8,24 @@ from itertools import count
 def get_rendered_page():
     name_file = 'book_page_information.json'
 
-    with open(name_file, 'r', encoding='utf-8') as my_file:
+    with open('site-example\statics\{}'.format(name_file), 'r', encoding='utf-8') as my_file:
         books_information = json.load(my_file)
 
     env = Environment(
-        loader=jinja2.FileSystemLoader('templates'),
+        loader=jinja2.FileSystemLoader('site-example/statics/templates'),
         autoescape=select_autoescape(['html', 'xml'])
     )
 
     template = env.get_template('template.html')
-    books_information = list(chunked(books_information, 10))
-    
-    for num, part_of_books in enumerate(books_information, 1):
-        if num <= 1:
-            path_file = 'pages/index'
-        else:
-            path_file = 'index'
+    number_pages = enumerate(list(chunked(books_information, 10)), 1)
 
+    for page_number, part_of_books in number_pages:
         rendered_page = template.render(
             books_information=list(chunked(part_of_books, 2)),
-            path_file=path_file,
-            id_num=num,
-            num_pages=5 #добавить счет страниц
+            page_number=page_number,
+            number_pages=5
             )
-        with open(('pages/index{}.html').format(num), 'w', encoding="utf8") as file:
+        with open(('site-example/pages/index{}.html').format(page_number), 'w', encoding="utf8") as file:
             file.write(rendered_page)
 
 
