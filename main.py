@@ -1,6 +1,7 @@
 from livereload import Server
 from render_website import get_rendered_page
 
+
 def rebuild():
     print("Site rebuilt")
 
