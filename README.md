@@ -38,7 +38,7 @@ $ start chrome http://127.0.0.1:5500/site-example/pages/index1.html
 ### OR(Via Git-Hub)
 
 ```
-$ start chrome https://ruk228.github.io/Lesson-5.-Creating-an-online-library/site-example/pages/index1.html
+$ start chrome https://ruk228.github.io/Creating-an-online-library/site-example/pages/index1.html
 ```
 [https://ruk228.github.io/Creating-an-online-library/site-example/pages/index1.html](https://ruk228.github.io/Lesson-5.-Creating-an-online-library/site-example/pages/index1.html)
 # Project Goals
