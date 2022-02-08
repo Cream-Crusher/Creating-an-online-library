@@ -17,19 +17,19 @@ def get_information_for_template():
     )
 
     template = env.get_template('template.html')
-    number_pages = enumerate(list(chunked(books_information, 10)), 1)
-    return template, number_pages
+    processed_books_information = enumerate(list(chunked(books_information, 10)), 1)
+    return template, processed_books_information
 
 
 def get_rendered_page():
-    template, number_pages = get_information_for_template()
+    template, processed_books_information = get_information_for_template()
 
-    for page_number, part_of_books in number_pages:
+    for page_number, books_information in processed_books_information:
 
         rendered_page = template.render(
-            books_information=list(chunked(part_of_books, 2)),
+            books_information=list(chunked(books_information, 2)),
             page_number=page_number,
-            number_pages=5
+            number_pages=5#узанть как вывести максемальное значение page_number 
             )
         with open(('site-example/pages/index{}.html').format(page_number), 'w', encoding="utf8") as file:
             file.write(rendered_page)
