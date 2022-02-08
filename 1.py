@@ -17,19 +17,21 @@ def get_information_for_template():
 
     template = env.get_template('template.html')
     processed_books_information = enumerate(list(chunked(books_information, 10)), 1)
-    #num_page = max(processed_books_information)[0]
     return template, processed_books_information
 
 
 def get_rendered_page():
     template, processed_books_information = get_information_for_template()
+    max_num_page = max(processed_books_information)[0]
 
     for number_page, books_information in processed_books_information:
 
-        rendered_page = template.render(
+        rendered_page = (
             books_information=list(chunked(books_information, 2)),
             number_page=number_page,
-            num_page=5#num_page
+            number_pages=max_num_page
             )
-        with open(('site-example/pages/index{}.html').format(number_page), 'w', encoding="utf8") as file:
-            file.write(rendered_page)
+    print(rendered_page)
+
+if __name__ == '__main__':
+    get_rendered_page()

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<title>Книги - страница {{ number_page }}</title>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,14 +15,14 @@
       <div class="row">
         {% for book_information in books_information %}
         <div class="col">
-          <div class="container">
+          <div class="container"> 
             <div class="col">
               <div class="card mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
-                  <div class="col-md-4">
+                  <div class="col-md-4"> 
                     <img src=../media/images/{{ book_information.image_name|urlencode }} class="card-img" alt='{{ book_information.filename }}'>
                   </div>
-                    <div class="col-md-8"> 
+                    <div class="col-md-8">
                       <div class="card-body">
                         <h5 class="card-title">{{ book_information.filename }}</h5>
                         <p class="card-text">{{ book_information.author }}</p>
@@ -43,25 +44,25 @@
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
 
-        {% if page_number == 1 %}
-          <li class="page-item disabled">
+        {% if number_page == 1 %}
+          <li class="page-item disabled"> 
         {% endif %}
-        <a class="page-link" href="index{{ page_number-1 }}.html" tabindex="-1"  aria-label="true">Назад</a>
+        <a class="page-link" href="index{{ number_page-1 }}.html" tabindex="-1"  aria-label="true">Назад</a>
       </li>
 
-        {% for num in range( number_pages ) %} 
+        {% for num in range( num_page ) %} 
 
-          {% if page_number == num+1 %}
+          {% if number_page == num+1 %}
             <li class="page-item active" aria-current="page">
           {% endif %}
 
               <a class="page-item"><a class="page-link" href="index{{ num+1 }}.html">{{ num+1 }}</a></li>
           {% endfor %}
 
-          {% if page_number == 5 %}
+          {% if number_page == 5 %}
             <li class="page-item disabled">
           {% endif %}
-          <a class="page-link" href="index{{ page_number+1 }}.html" tabindex="-1"  aria-label="true">Вперёд</a>
+          <a class="page-link" href="index{{ number_page+1 }}.html" tabindex="-1"  aria-label="true">Вперёд</a>
         </li>
       </ul> 
     </nav>
