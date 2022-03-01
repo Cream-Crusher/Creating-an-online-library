@@ -12,7 +12,7 @@ Use pip to install dependencies:
 $ pip install -r requirements.txt
 ```
 
-### Run
+## Run
 
 example:
 
@@ -29,13 +29,13 @@ Site rebuilt
 [I 220205 18:32:20 handlers:64] Start detecting changes
 ```
 
-### website launch
+#### website launch
 
 ```
 $ start chrome http://127.0.0.1:5500/site-example/pages/index1.html
 ```
 [http://127.0.0.1:5500/site-example/pages/index1.html](http://127.0.0.1:5500/site-example/pages/index1.html)
-### OR(Via Git-Hub)
+#### OR(Via Git-Hub)
 
 ```
 $ start chrome https://ruk228.github.io/Creating-an-online-library/site-example/pages/index1.html
