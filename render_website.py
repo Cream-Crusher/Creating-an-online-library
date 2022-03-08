@@ -23,7 +23,6 @@ def get_processed_books_and_template():
 def get_rendered_page():
     template, processed_books = get_processed_books_and_template()
     pages_number = len(processed_books)
-    way_to_books = '../media/books/'
 
     for page_number, books_information in enumerate(processed_books, 1):
 
@@ -31,7 +30,6 @@ def get_rendered_page():
             books_information=list(chunked(books_information, 2)),
             page_number=page_number,
             pages_number=pages_number,
-            way_to_books=way_to_books
             )
 
         with open(('site-example/pages/index{}.html').format(page_number), 'w', encoding="utf8") as file:
