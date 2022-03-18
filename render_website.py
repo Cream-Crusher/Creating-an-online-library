@@ -23,7 +23,7 @@ def get_processed_books_and_template():
 def get_rendered_page():
     template, processed_books = get_processed_books_and_template()
     pages_number = len(processed_books)
-
+    print(pages_number)
     for page_number, books_information in enumerate(processed_books, 1):
 
         rendered_page = template.render(
