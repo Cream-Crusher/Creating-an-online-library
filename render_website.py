@@ -7,7 +7,7 @@ from more_itertools import chunked
 def get_processed_books_and_template():
     file_name = 'book_page_information.json'
 
-    with open('site-example\statics\{}'.format(file_name), 'r', encoding='utf-8') as my_file:
+    with open('site-example/statics/{}'.format(file_name), 'r', encoding='utf-8') as my_file:
         books_information = json.load(my_file)
 
     env = Environment(
