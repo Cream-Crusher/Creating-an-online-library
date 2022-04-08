@@ -8,7 +8,7 @@ from more_itertools import chunked
 def get_processed_books(num = 10):
     file_name = 'book_page_information.json'
     
-    with open(os.path.join('site-example', 'statics', '{}'.format(file_name)), 'r', encoding='utf-8') as file:
+    with open(os.path.join('site-example', 'templates', '{}'.format(file_name)), 'r', encoding='utf-8') as file:
         books = json.load(file)
 
     processed_books = list(chunked(books, num))
@@ -17,7 +17,7 @@ def get_processed_books(num = 10):
 
 def get_template():
     env = Environment(
-        loader=jinja2.FileSystemLoader(os.path.join('site-example', 'statics', 'templates')),
+        loader=jinja2.FileSystemLoader(os.path.join('site-example', 'templates')),
         autoescape=select_autoescape(['html', 'xml'])
     )
     template = env.get_template('template.html')
