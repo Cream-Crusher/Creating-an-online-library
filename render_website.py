@@ -5,13 +5,14 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from more_itertools import chunked
 
 
-def get_processed_books(num = 10):
+def get_processed_books(num_books = 10):
     file_name = 'book_page_information.json'
-    
-    with open(os.path.join('site-example', 'templates', '{}'.format(file_name)), 'r', encoding='utf-8') as file:
+    path_a_file=os.path.join('site-example', 'templates', '{}'.format(file_name))
+
+    with open(path_a_file, 'r', encoding='utf-8') as file:
         books = json.load(file)
 
-    processed_books = list(chunked(books, num))
+    processed_books = list(chunked(books, num_books))
     return processed_books
 
 
@@ -24,7 +25,7 @@ def get_template():
     return template
 
 
-def get_rendered_page():
+def rendered_pages():
     template = get_template()
     processed_books = get_processed_books()
     pages_number = len(processed_books)
