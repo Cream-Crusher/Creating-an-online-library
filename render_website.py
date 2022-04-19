@@ -7,7 +7,7 @@ from more_itertools import chunked
 
 def get_processed_books(maximum_number_books_page = 10):
     file_name = 'book_page_information.json'
-    path_a_file=os.path.join('site-example', 'templates', file_name)
+    path_a_file=os.path.join('site-example', 'media', file_name)
 
     with open(path_a_file, 'r', encoding='utf-8') as file:
         books = json.load(file)
