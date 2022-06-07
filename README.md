@@ -1,6 +1,6 @@
 # Сreation Online Library
 
-The project was created to create a video player
+The project was created to create an online library
 
 ## How to start
 
@@ -17,7 +17,7 @@ $ pip install -r requirements.txt
 example:
 
 ```
-$ python3 server.py runserver
+$ python main.py
 ```
 
 ### You will see
@@ -32,15 +32,15 @@ Site rebuilt
 #### website launch
 
 ```
-$ start chrome http://127.0.0.1:5500
+$ start chrome http://127.0.0.1:5500/site-example/pages/index1.html
 ```
-[http://127.0.0.1:5500](http://127.0.0.1:5500)
+[http://127.0.0.1:5500/site-example/pages/index1.html](http://127.0.0.1:5500/site-example/pages/index1.html)
 #### OR(Via Git-Hub)
 
 ```
-$ start chrome https://ruk228.github.io/create-video-player/index.html
+$ start chrome https://ruk228.github.io/Creating-an-online-library/site-example/pages/index1.html
 ```
-[https://ruk228.github.io/create-video-player/index.html](https://ruk228.github.io/create-video-player/index.html)
+[https://ruk228.github.io/Creating-an-online-library/site-example/pages/index1.html](https://ruk228.github.io/Creating-an-online-library/site-example/pages/index1.html)
 
 # Project Goals
 
