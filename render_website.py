@@ -16,17 +16,18 @@ def get_processed_books():
     return processed_books
 
 
-def get_template():
+def get_template(name_template):
     env = Environment(
         loader=FileSystemLoader(os.path.join('site-example', 'templates')),
         autoescape=select_autoescape(['html', 'xml'])
     )
-    template = env.get_template('template.html')
+    template = env.get_template(name_template)
     return template
 
 
 def rendered_pages():
-    template = get_template()
+    name_template = 'template.html'
+    template = get_template(name_template)
     processed_books = get_processed_books()
     pages_number = len(processed_books)
 
@@ -42,4 +43,27 @@ def rendered_pages():
         with open(path_a_file, 'w', encoding="utf8") as file:
             file.write(rendered_page)
 
-    print("Site rebuilt")
+        name_template = 'template_book.html'
+        template = get_template(name_template)
+
+        for processed_books in processed_books:
+
+            for processed_book in processed_books:
+                try:
+                    book = []
+                    book_name = processed_book['filename']
+                    path_a_file = os.path.join('site-example', 'pages', '{}.html'.format(book_name))
+                    path_a_book = os.path.join('site-example', 'media', 'books', '{}.txt'.format(book_name))
+                    book.append(open(path_a_book).read())
+                    rendered_page = template.render(
+                        book=book,
+                        book_name=book_name,
+                    )
+
+                    with open(path_a_file, 'w') as file:
+                        file.write(rendered_page)
+                
+                except:
+                    print('not found: {}'.format(book_name))
+
+        print("Site rebuilt")

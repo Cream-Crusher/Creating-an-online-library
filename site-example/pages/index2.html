@@ -1,5 +1,44 @@
 <!doctype html>
 <html lang="en">
+  <link rel="stylesheet" href="../statics/font-awesome/css/font-awesome.min.css">
+  <meta charset="utf-8">
+<style type="text/css">
+
+  .book-card {
+    max-height: 300px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .background-color {
+    background-color: #e3f2fd;
+  }
+
+  button {
+      border-style: none;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0)
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+   .background {
+   	background: #d8d8d8;
+	  color: rgb(10, 10, 10);
+   }
+   .background-card {
+   	background: #8b8b8b;
+	  color: rgb(10, 10, 10);
+   }
+
+</style>
+ 
+
+
+<body> 
 <title>Книги - страница 2</title>
 <link rel="icon" href="../statics/images_favicon.png" sizes="16x16">
     <!-- Required meta tags -->
@@ -7,246 +46,313 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../statics/css/bootstrap.min.css">
-    <body>
-      <div class="container">
-        
-        <div class="row">
+    <body >
+      <div class="container; background">
+        <ul class="nav; background-color">
+          <li class="nav-item">
+            <a href="http://127.0.0.1:5500/site-example/pages/home.html">
+            <p class="nav-link m-0"><i class="fa fa-home" aria-hidden="true"></i> Главная</p></a>
+          </li>
+        </ul>
+        <div class="container mt-2; background-card " >
+         
+        <div class="row"> 
           
           <div class="col"> 
-            <div class="container p-3">
+            <div class="container p-1;">
               <div class="col">
-                <div class="card mb-3" style="max-width: 370px; max-height: 250px;">
+                <div class="card mb-3 book-card">
                   <div class="row no-gutters">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                       <img src=../media/images/5299.jpg  class="m-4 card-img" alt='Продается тело Христа'>
-                    </div>
+                    </div> 
                     <div class="p-3 col-md-8">
                       <div class="card-body m-3">
-                        <h5 class="m-0 card-title">Продается тело Христа</h5>
-                        <p class="m-0 card-text">Аджалов Владимир Исфандеярович</p>
-                        <p><span class="m-0 badge badge-light">Научная фантастика</span></p>
-                        <a href="../media/books/%D0%9F%D1%80%D0%BE%D0%B4%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D1%82%D0%B5%D0%BB%D0%BE%20%D0%A5%D1%80%D0%B8%D1%81%D1%82%D0%B0.txt" target="_blank" rel="noopener noreferrer">Читать</a>
+                        <button>
+                        <h5 class="m-0 card-title">Название: Продается тело Христа</h5> 
+                        <p class="m-0 card-text">Автор: Аджалов Владимир Исфандеярович</p>
+                        <p><span class="m-0 badge badge-light">Теги: Научная фантастика</span></p>
+                          <a href="Продается тело Христа.html"> 
+                            <div class="d-flex justify-content-center">
+                              <p class="align-middle m-0" style="line-height:50px; font-size: 20px;">Читать</p>
+                            </div>
+                          </a>
+                        </button>
                       </div>  
                     </div>
                   </div>
                 </div>
               </div>
-            </div>                
-          </div>                
+            </div>               
+          </div>           
           
           <div class="col"> 
-            <div class="container p-3">
+            <div class="container p-1;">
               <div class="col">
-                <div class="card mb-3" style="max-width: 370px; max-height: 250px;">
+                <div class="card mb-3 book-card">
                   <div class="row no-gutters">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                       <img src=../media/images/6758.jpg  class="m-4 card-img" alt='Те, кто против нас'>
-                    </div>
+                    </div> 
                     <div class="p-3 col-md-8">
                       <div class="card-body m-3">
-                        <h5 class="m-0 card-title">Те, кто против нас</h5>
-                        <p class="m-0 card-text">Руденко Борис</p>
-                        <p><span class="m-0 badge badge-light">Научная фантастика</span></p>
-                        <a href="../media/books/%D0%A2%D0%B5%2C%20%D0%BA%D1%82%D0%BE%20%D0%BF%D1%80%D0%BE%D1%82%D0%B8%D0%B2%20%D0%BD%D0%B0%D1%81.txt" target="_blank" rel="noopener noreferrer">Читать</a>
+                        <button>
+                        <h5 class="m-0 card-title">Название: Те, кто против нас</h5> 
+                        <p class="m-0 card-text">Автор: Руденко Борис</p>
+                        <p><span class="m-0 badge badge-light">Теги: Научная фантастика</span></p>
+                          <a href="Те, кто против нас.html"> 
+                            <div class="d-flex justify-content-center">
+                              <p class="align-middle m-0" style="line-height:50px; font-size: 20px;">Читать</p>
+                            </div>
+                          </a>
+                        </button>
                       </div>  
                     </div>
                   </div>
                 </div>
               </div>
-            </div>                
-          </div>                
+            </div>               
+          </div>           
           
         </div>
-        
-        <div class="row">
+         
+        <div class="row"> 
           
           <div class="col"> 
-            <div class="container p-3">
+            <div class="container p-1;">
               <div class="col">
-                <div class="card mb-3" style="max-width: 370px; max-height: 250px;">
+                <div class="card mb-3 book-card">
                   <div class="row no-gutters">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                       <img src=../media/images/6766.jpg  class="m-4 card-img" alt='Телепортеры, внимание!'>
-                    </div>
+                    </div> 
                     <div class="p-3 col-md-8">
                       <div class="card-body m-3">
-                        <h5 class="m-0 card-title">Телепортеры, внимание!</h5>
-                        <p class="m-0 card-text">Мар Курт</p>
-                        <p><span class="m-0 badge badge-light">Научная фантастика</span></p>
-                        <a href="../media/books/%D0%A2%D0%B5%D0%BB%D0%B5%D0%BF%D0%BE%D1%80%D1%82%D0%B5%D1%80%D1%8B%2C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%21.txt" target="_blank" rel="noopener noreferrer">Читать</a>
+                        <button>
+                        <h5 class="m-0 card-title">Название: Телепортеры, внимание!</h5> 
+                        <p class="m-0 card-text">Автор: Мар Курт</p>
+                        <p><span class="m-0 badge badge-light">Теги: Научная фантастика</span></p>
+                          <a href="Телепортеры, внимание!.html"> 
+                            <div class="d-flex justify-content-center">
+                              <p class="align-middle m-0" style="line-height:50px; font-size: 20px;">Читать</p>
+                            </div>
+                          </a>
+                        </button>
                       </div>  
                     </div>
                   </div>
                 </div>
               </div>
-            </div>                
-          </div>                
+            </div>               
+          </div>           
           
           <div class="col"> 
-            <div class="container p-3">
+            <div class="container p-1;">
               <div class="col">
-                <div class="card mb-3" style="max-width: 370px; max-height: 250px;">
+                <div class="card mb-3 book-card">
                   <div class="row no-gutters">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                       <img src=../media/images/8283.jpg  class="m-4 card-img" alt='Зодиак'>
-                    </div>
+                    </div> 
                     <div class="p-3 col-md-8">
                       <div class="card-body m-3">
-                        <h5 class="m-0 card-title">Зодиак</h5>
-                        <p class="m-0 card-text">Стивенсон Нил</p>
-                        <p><span class="m-0 badge badge-light">Научная фантастика</span></p>
-                        <a href="../media/books/%D0%97%D0%BE%D0%B4%D0%B8%D0%B0%D0%BA.txt" target="_blank" rel="noopener noreferrer">Читать</a>
+                        <button>
+                        <h5 class="m-0 card-title">Название: Зодиак</h5> 
+                        <p class="m-0 card-text">Автор: Стивенсон Нил</p>
+                        <p><span class="m-0 badge badge-light">Теги: Научная фантастика</span></p>
+                          <a href="Зодиак.html"> 
+                            <div class="d-flex justify-content-center">
+                              <p class="align-middle m-0" style="line-height:50px; font-size: 20px;">Читать</p>
+                            </div>
+                          </a>
+                        </button>
                       </div>  
                     </div>
                   </div>
                 </div>
               </div>
-            </div>                
-          </div>                
+            </div>               
+          </div>           
           
         </div>
-        
-        <div class="row">
+         
+        <div class="row"> 
           
           <div class="col"> 
-            <div class="container p-3">
+            <div class="container p-1;">
               <div class="col">
-                <div class="card mb-3" style="max-width: 370px; max-height: 250px;">
+                <div class="card mb-3 book-card">
                   <div class="row no-gutters">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                       <img src=../media/images/8902.jpg  class="m-4 card-img" alt='Астронавт Джонс'>
-                    </div>
+                    </div> 
                     <div class="p-3 col-md-8">
                       <div class="card-body m-3">
-                        <h5 class="m-0 card-title">Астронавт Джонс</h5>
-                        <p class="m-0 card-text">Хайнлайн Роберт</p>
-                        <p><span class="m-0 badge badge-light">Детская фантастика</span></p>
-                        <a href="../media/books/%D0%90%D1%81%D1%82%D1%80%D0%BE%D0%BD%D0%B0%D0%B2%D1%82%20%D0%94%D0%B6%D0%BE%D0%BD%D1%81.txt" target="_blank" rel="noopener noreferrer">Читать</a>
+                        <button>
+                        <h5 class="m-0 card-title">Название: Астронавт Джонс</h5> 
+                        <p class="m-0 card-text">Автор: Хайнлайн Роберт</p>
+                        <p><span class="m-0 badge badge-light">Теги: Детская фантастика</span></p>
+                          <a href="Астронавт Джонс.html"> 
+                            <div class="d-flex justify-content-center">
+                              <p class="align-middle m-0" style="line-height:50px; font-size: 20px;">Читать</p>
+                            </div>
+                          </a>
+                        </button>
                       </div>  
                     </div>
                   </div>
                 </div>
               </div>
-            </div>                
-          </div>                
+            </div>               
+          </div>           
           
           <div class="col"> 
-            <div class="container p-3">
+            <div class="container p-1;">
               <div class="col">
-                <div class="card mb-3" style="max-width: 370px; max-height: 250px;">
+                <div class="card mb-3 book-card">
                   <div class="row no-gutters">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                       <img src=../media/images/9402.jpg  class="m-4 card-img" alt='Дочь Нефертити'>
-                    </div>
+                    </div> 
                     <div class="p-3 col-md-8">
                       <div class="card-body m-3">
-                        <h5 class="m-0 card-title">Дочь Нефертити</h5>
-                        <p class="m-0 card-text">Семенова Татьяна</p>
-                        <p><span class="m-0 badge badge-light">Детская образовательная литература</span></p>
-                        <a href="../media/books/%D0%94%D0%BE%D1%87%D1%8C%20%D0%9D%D0%B5%D1%84%D0%B5%D1%80%D1%82%D0%B8%D1%82%D0%B8.txt" target="_blank" rel="noopener noreferrer">Читать</a>
+                        <button>
+                        <h5 class="m-0 card-title">Название: Дочь Нефертити</h5> 
+                        <p class="m-0 card-text">Автор: Семенова Татьяна</p>
+                        <p><span class="m-0 badge badge-light">Теги: Детская образовательная литература</span></p>
+                          <a href="Дочь Нефертити.html"> 
+                            <div class="d-flex justify-content-center">
+                              <p class="align-middle m-0" style="line-height:50px; font-size: 20px;">Читать</p>
+                            </div>
+                          </a>
+                        </button>
                       </div>  
                     </div>
                   </div>
                 </div>
               </div>
-            </div>                
-          </div>                
+            </div>               
+          </div>           
           
         </div>
-        
-        <div class="row">
+         
+        <div class="row"> 
           
           <div class="col"> 
-            <div class="container p-3">
+            <div class="container p-1;">
               <div class="col">
-                <div class="card mb-3" style="max-width: 370px; max-height: 250px;">
+                <div class="card mb-3 book-card">
                   <div class="row no-gutters">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                       <img src=../media/images/10768.jpg  class="m-4 card-img" alt='Наложница императора'>
-                    </div>
+                    </div> 
                     <div class="p-3 col-md-8">
                       <div class="card-body m-3">
-                        <h5 class="m-0 card-title">Наложница императора</h5>
-                        <p class="m-0 card-text">Семенова Татьяна</p>
-                        <p><span class="m-0 badge badge-light">Детская образовательная литература</span></p>
-                        <a href="../media/books/%D0%9D%D0%B0%D0%BB%D0%BE%D0%B6%D0%BD%D0%B8%D1%86%D0%B0%20%D0%B8%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0.txt" target="_blank" rel="noopener noreferrer">Читать</a>
+                        <button>
+                        <h5 class="m-0 card-title">Название: Наложница императора</h5> 
+                        <p class="m-0 card-text">Автор: Семенова Татьяна</p>
+                        <p><span class="m-0 badge badge-light">Теги: Детская образовательная литература</span></p>
+                          <a href="Наложница императора.html"> 
+                            <div class="d-flex justify-content-center">
+                              <p class="align-middle m-0" style="line-height:50px; font-size: 20px;">Читать</p>
+                            </div>
+                          </a>
+                        </button>
                       </div>  
                     </div>
                   </div>
                 </div>
               </div>
-            </div>                
-          </div>                
+            </div>               
+          </div>           
           
           <div class="col"> 
-            <div class="container p-3">
+            <div class="container p-1;">
               <div class="col">
-                <div class="card mb-3" style="max-width: 370px; max-height: 250px;">
+                <div class="card mb-3 book-card">
                   <div class="row no-gutters">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                       <img src=../media/images/10923.jpg  class="m-4 card-img" alt='Общая теория Доминант'>
-                    </div>
+                    </div> 
                     <div class="p-3 col-md-8">
                       <div class="card-body m-3">
-                        <h5 class="m-0 card-title">Общая теория Доминант</h5>
-                        <p class="m-0 card-text">Белохвостов Денис</p>
-                        <p><span class="m-0 badge badge-light">Детская фантастика</span></p>
-                        <a href="../media/books/%D0%9E%D0%B1%D1%89%D0%B0%D1%8F%20%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F%20%D0%94%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D0%BD%D1%82.txt" target="_blank" rel="noopener noreferrer">Читать</a>
+                        <button>
+                        <h5 class="m-0 card-title">Название: Общая теория Доминант</h5> 
+                        <p class="m-0 card-text">Автор: Белохвостов Денис</p>
+                        <p><span class="m-0 badge badge-light">Теги: Детская фантастика</span></p>
+                          <a href="Общая теория Доминант.html"> 
+                            <div class="d-flex justify-content-center">
+                              <p class="align-middle m-0" style="line-height:50px; font-size: 20px;">Читать</p>
+                            </div>
+                          </a>
+                        </button>
                       </div>  
                     </div>
                   </div>
                 </div>
               </div>
-            </div>                
-          </div>                
+            </div>               
+          </div>           
           
         </div>
-        
-        <div class="row">
+         
+        <div class="row"> 
           
           <div class="col"> 
-            <div class="container p-3">
+            <div class="container p-1;">
               <div class="col">
-                <div class="card mb-3" style="max-width: 370px; max-height: 250px;">
+                <div class="card mb-3 book-card">
                   <div class="row no-gutters">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                       <img src=../media/images/13038.jpg  class="m-4 card-img" alt='Звездный зверь ( Звездное чудовище)'>
-                    </div>
+                    </div> 
                     <div class="p-3 col-md-8">
                       <div class="card-body m-3">
-                        <h5 class="m-0 card-title">Звездный зверь ( Звездное чудовище)</h5>
-                        <p class="m-0 card-text">Хайнлайн Роберт</p>
-                        <p><span class="m-0 badge badge-light">Детская фантастика</span></p>
-                        <a href="../media/books/%D0%97%D0%B2%D0%B5%D0%B7%D0%B4%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%B2%D0%B5%D1%80%D1%8C%20%28%20%D0%97%D0%B2%D0%B5%D0%B7%D0%B4%D0%BD%D0%BE%D0%B5%20%D1%87%D1%83%D0%B4%D0%BE%D0%B2%D0%B8%D1%89%D0%B5%29.txt" target="_blank" rel="noopener noreferrer">Читать</a>
+                        <button>
+                        <h5 class="m-0 card-title">Название: Звездный зверь ( Звездное чудовище)</h5> 
+                        <p class="m-0 card-text">Автор: Хайнлайн Роберт</p>
+                        <p><span class="m-0 badge badge-light">Теги: Детская фантастика</span></p>
+                          <a href="Звездный зверь ( Звездное чудовище).html"> 
+                            <div class="d-flex justify-content-center">
+                              <p class="align-middle m-0" style="line-height:50px; font-size: 20px;">Читать</p>
+                            </div>
+                          </a>
+                        </button>
                       </div>  
                     </div>
                   </div>
                 </div>
               </div>
-            </div>                
-          </div>                
+            </div>               
+          </div>           
           
           <div class="col"> 
-            <div class="container p-3">
+            <div class="container p-1;">
               <div class="col">
-                <div class="card mb-3" style="max-width: 370px; max-height: 250px;">
+                <div class="card mb-3 book-card">
                   <div class="row no-gutters">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                       <img src=../media/images/18919.jpg  class="m-4 card-img" alt='...Яко помниши его'>
-                    </div>
+                    </div> 
                     <div class="p-3 col-md-8">
                       <div class="card-body m-3">
-                        <h5 class="m-0 card-title">...Яко помниши его</h5>
-                        <p class="m-0 card-text">Азимов Айзек</p>
-                        <p><span class="m-0 badge badge-light">Научная фантастика</span></p>
-                        <a href="../media/books/...%D0%AF%D0%BA%D0%BE%20%D0%BF%D0%BE%D0%BC%D0%BD%D0%B8%D1%88%D0%B8%20%D0%B5%D0%B3%D0%BE.txt" target="_blank" rel="noopener noreferrer">Читать</a>
+                        <button>
+                        <h5 class="m-0 card-title">Название: ...Яко помниши его</h5> 
+                        <p class="m-0 card-text">Автор: Азимов Айзек</p>
+                        <p><span class="m-0 badge badge-light">Теги: Научная фантастика</span></p>
+                          <a href="...Яко помниши его.html"> 
+                            <div class="d-flex justify-content-center">
+                              <p class="align-middle m-0" style="line-height:50px; font-size: 20px;">Читать</p>
+                            </div>
+                          </a>
+                        </button>
                       </div>  
                     </div>
                   </div>
                 </div>
               </div>
-            </div>                
-          </div>                
+            </div>               
+          </div>           
           
         </div>
         
@@ -256,7 +362,7 @@
           <li>
           
 
-          <a class="page-link" href="index1.html" tabindex="-1"  aria-label="true">Назад</a>
+          <a class="page-link" href="index1.html" tabindex="-1"  aria-label="true"><i class="fa fa-caret-left" aria-hidden="true"></i></a>
         </li>
 
         
@@ -317,7 +423,7 @@
 
           
 
-          <a class="page-link" href="index3.html" tabindex="-1"  aria-label="true">Вперёд</a>
+          <a class="page-link" href="index3.html" tabindex="-1"  aria-label="true"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
           </li>
         </ul>
       </nav>

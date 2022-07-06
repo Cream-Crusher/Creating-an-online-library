@@ -1,5 +1,44 @@
 <!doctype html>
 <html lang="en">
+  <link rel="stylesheet" href="../statics/font-awesome/css/font-awesome.min.css">
+  <meta charset="utf-8">
+<style type="text/css">
+
+  .book-card {
+    max-height: 300px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .background-color {
+    background-color: #e3f2fd;
+  }
+
+  button {
+      border-style: none;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0)
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+   .background {
+   	background: #d8d8d8;
+	  color: rgb(10, 10, 10);
+   }
+   .background-card {
+   	background: #8b8b8b;
+	  color: rgb(10, 10, 10);
+   }
+
+</style>
+
+
+
+<body> 
 <title>Книги - страница {{ page_number }}</title>
 <link rel="icon" href="../statics/images_favicon.png" sizes="16x16">
     <!-- Required meta tags -->
@@ -7,46 +46,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../statics/css/bootstrap.min.css">
-    <body>
-      <div class="container">
-        {% for books in books %}
-        <div class="row">
+    <body >
+      <div class="container; background">
+        <ul class="nav; background-color">
+          <li class="nav-item">
+            <a href="http://127.0.0.1:5500/site-example/pages/home.html">
+            <p class="nav-link m-0"><i class="fa fa-home" aria-hidden="true"></i> Главная</p></a>
+          </li>
+        </ul>
+        <div class="container mt-2; background-card " >
+        {% for books in books %} 
+        <div class="row"> 
           {% for book in books %}
           <div class="col"> 
-            <div class="container p-3">
+            <div class="container p-1;">
               <div class="col">
-                <div class="card mb-3" style="max-width: 370px; max-height: 250px;">
+                <div class="card mb-3 book-card">
                   <div class="row no-gutters">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                       <img src=../media/images/{{ book.image_name|urlencode }}  class="m-4 card-img" alt='{{ book.filename }}'>
-                    </div>
+                    </div> 
                     <div class="p-3 col-md-8">
                       <div class="card-body m-3">
-                        <h5 class="m-0 card-title">{{ book.filename }}</h5>
-                        <p class="m-0 card-text">{{ book.author }}</p>
-                        <p><span class="m-0 badge badge-light">{{ book.genres[0] }}</span></p>
-                        <a href="../media/books/{{ book.filename|urlencode }}.txt" target="_blank" rel="noopener noreferrer">Читать</a>
+                        <button>
+                        <h5 class="m-0 card-title">Название: {{ book.filename }}</h5> 
+                        <p class="m-0 card-text">Автор: {{ book.author }}</p>
+                        <p><span class="m-0 badge badge-light">Теги: {{ book.genres[0] }}</span></p>
+                          <a href="{{ book.filename }}.html"> 
+                            <div class="d-flex justify-content-center">
+                              <p class="align-middle m-0" style="line-height:50px; font-size: 20px;">Читать</p>
+                            </div>
+                          </a>
+                        </button>
                       </div>  
                     </div>
                   </div>
                 </div>
               </div>
-            </div>                
-          </div>                
+            </div>               
+          </div>           
           {% endfor %}
         </div>
         {% endfor %}
       </div>
-      <nav aria-label="Page navigation example">
+      <nav aria-label="Page navigation example; ">
         <ul class="pagination justify-content-center">
           <li>
           {% if page_number == 1 %}
 
-            <li class="page-item disabled">
+            <li class="page-item disabled;">
 
           {% endif %}
 
-          <a class="page-link" href="index{{ page_number-1 }}.html" tabindex="-1"  aria-label="true">Назад</a>
+          <a class="page-link" href="index{{ page_number-1 }}.html" tabindex="-1"  aria-label="true"><i class="fa fa-caret-left" aria-hidden="true"></i></a>
         </li>
 
         {% for num in range(1, pages_number+1 ) %}
@@ -75,7 +127,7 @@
 
           {% endif %}
 
-          <a class="page-link" href="index{{ page_number+1 }}.html" tabindex="-1"  aria-label="true">Вперёд</a>
+          <a class="page-link" href="index{{ page_number+1 }}.html" tabindex="-1"  aria-label="true"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
           </li>
         </ul>
       </nav>
