@@ -41,10 +41,8 @@ $ start chrome http://127.0.0.1:5500/site-example/pages/index1.html
 $ start chrome https://ruk228.github.io/Creating-an-online-library/site-example/pages/index1.html
 ```
 [https://ruk228.github.io/Creating-an-online-library/site-example/pages/index1.html](https://ruk228.github.io/Creating-an-online-library/site-example/pages/index1.html)
-<<<<<<< HEAD
-=======
 
->>>>>>> 93c7ada0b7ac7f3b8b534e078eaa178f4777a2ee
+
 # Project Goals
 
 Training front-end
